@@ -288,78 +288,58 @@ body {
     }
 }
 
-/* Mobile Responsive Styles */
+/* MOBILE FIRST RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+    body {
+        background-color: white;
+    }
+    
     .resume-container {
         flex-direction: column;
         max-width: 100%;
+        width: 100%;
         margin: 0;
         box-shadow: none;
+        min-height: auto;
     }
     
-    .left-column, .right-column {
+    /* RIGHT COLUMN FIRST ON MOBILE */
+    .right-column {
+        order: 1;
         width: 100%;
+        padding: 0;
+    }
+    
+    .left-column {
+        order: 2;
+        width: 100%;
+        background-color: #e8e8e8;
     }
     
     /* Mobile Header */
     .header {
-        padding: 20px 15px 15px 15px;
+        padding: 20px 15px;
+        text-align: center;
+        background-color: white;
     }
     
     .name {
         font-size: 28px;
         letter-spacing: 1px;
-        text-align: center;
+        margin-bottom: 8px;
     }
     
     .title {
         font-size: 16px;
-        text-align: center;
+        margin-bottom: 0;
     }
     
-    /* Mobile Left Column */
-    .section-content {
-        padding: 15px;
-    }
-    
-    .section-header {
-        font-size: 18px;
-        padding: 10px 15px;
-    }
-    
-    /* Mobile Contact */
-    .contact-item {
-        flex-direction: column;
-        margin-bottom: 15px;
-    }
-    
-    .contact-item .label {
-        width: auto;
-        margin-bottom: 3px;
-        font-size: 13px;
-    }
-    
-    .contact-item .value {
-        font-size: 13px;
-        padding-left: 10px;
-    }
-    
-    /* Mobile Skills */
-    .skill-title {
-        font-size: 13px;
-    }
-    
-    .skill-content {
-        font-size: 12px;
-    }
-    
-    /* Mobile Right Column */
+    /* Mobile Professional Experience */
     .section-header-right {
-        padding: 15px 15px 8px 15px;
-        font-size: 20px;
+        padding: 20px 15px 10px 15px;
+        font-size: 22px;
     }
     
-    /* Mobile Experience */
     .experience-item {
         flex-direction: column;
         padding: 15px;
@@ -377,9 +357,10 @@ body {
     .date-range {
         width: auto;
         text-align: left;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         padding-right: 0;
         font-size: 13px;
+        font-weight: bold;
     }
     
     .start-date, .end-date {
@@ -393,15 +374,18 @@ body {
     
     .job-title {
         font-size: 16px;
+        margin-bottom: 4px;
     }
     
     .company {
         font-size: 13px;
+        margin-bottom: 10px;
     }
     
     .responsibilities li {
         font-size: 12px;
         line-height: 1.5;
+        margin-bottom: 6px;
     }
     
     /* Mobile Certifications */
@@ -414,13 +398,88 @@ body {
     .cert-list li {
         font-size: 12px;
         line-height: 1.5;
+        margin-bottom: 8px;
+    }
+    
+    /* Mobile Left Column Sections */
+    .section-header {
+        font-size: 18px;
+        padding: 12px 15px;
+    }
+    
+    .section-content {
+        padding: 15px;
+    }
+    
+    /* Mobile Contact */
+    .contact-item {
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+    
+    .contact-item .label {
+        width: auto;
+        margin-bottom: 3px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    
+    .contact-item .value {
+        font-size: 12px;
+        padding-left: 0;
+        color: #555;
+    }
+    
+    /* Mobile Education */
+    .education-item {
+        margin-bottom: 15px;
+    }
+    
+    .institution {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+    
+    .degree {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+    
+    .year {
+        font-size: 12px;
+    }
+    
+    /* Mobile Skills */
+    .skill-category {
+        margin-bottom: 12px;
+    }
+    
+    .skill-title {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+    
+    .skill-content {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    
+    /* Mobile Language */
+    .language-list li {
+        font-size: 12px;
+        margin-bottom: 6px;
     }
 }
 
 /* Extra Small Mobile Phones */
 @media (max-width: 480px) {
+    .header {
+        padding: 15px 10px;
+    }
+    
     .name {
         font-size: 24px;
+        letter-spacing: 0.5px;
     }
     
     .title {
@@ -429,13 +488,24 @@ body {
     
     .section-header {
         font-size: 16px;
+        padding: 10px 12px;
     }
     
     .section-header-right {
         font-size: 18px;
+        padding: 15px 10px 8px 10px;
     }
     
-    .contact-item .value {
-        font-size: 12px;
+    .section-content {
+        padding: 12px;
+    }
+    
+    .experience-item {
+        padding: 12px;
+        margin-left: 10px;
+    }
+    
+    .certifications-container {
+        padding: 12px;
     }
 } 
