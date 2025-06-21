@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.4;
+}
+
+.resume-container {
+    display: flex;
+    max-width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Column */
+.left-column {
+    width: 35%;
+    background-color: #e8e8e8;
+    padding: 0;
+}
+
+.section {
+    margin-bottom: 0;
+}
+
+.section-header {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.section-content {
+    padding: 20px;
+    background-color: #e8e8e8;
+}
+
+/* Contact Section */
+.contact-item {
+    display: flex;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.contact-item .label {
+    font-weight: bold;
+    width: 70px;
+    color: #333;
+}
+
+.contact-item .value {
+    flex: 1;
+    color: #555;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Education Section */
+.education-item {
+    margin-bottom: 20px;
+}
+
+.institution {
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.degree {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+.year {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Skills Section */
+.skill-category {
+    margin-bottom: 16px;
+}
+
+.skill-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.skill-content {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Language Section */
+.language-list {
+    list-style: none;
+}
+
+.language-list li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 12px;
+}
+
+.language-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+/* Right Column */
+.right-column {
+    width: 65%;
+    padding: 0;
+    background-color: white;
+}
+
+/* Header */
+.header {
+    padding: 40px 30px 30px 30px;
+    background-color: white;
+}
+
+.name {
+    font-size: 42px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.title {
+    font-size: 18px;
+    color: #666;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/* Professional Experience */
+.section-header-right {
+    background-color: white;
+    color: #333;
+    padding: 20px 30px 10px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+.experience-item {
+    display: flex;
+    padding: 20px 30px;
+    border-left: 3px solid #ddd;
+    margin-left: 30px;
+    position: relative;
+}
+
+.experience-item::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 25px;
+    width: 9px;
+    height: 9px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.date-range {
+    width: 100px;
+    flex-shrink: 0;
+    padding-right: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+}
+
+.start-date, .end-date {
+    display: block;
+    font-weight: bold;
+}
+
+.dash {
+    display: block;
+    text-align: center;
+    margin: 2px 0;
+}
+
+.job-info {
+    flex: 1;
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.company {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.responsibilities {
+    list-style: none;
+    padding-left: 0;
+}
+
+.responsibilities li {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.responsibilities li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+/* Certifications & Courses */
+.certifications-container {
+    display: flex;
+    gap: 30px;
+    padding: 20px 30px;
+}
+
+.cert-column {
+    flex: 1;
+}
+
+.cert-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cert-list li {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 12px;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.cert-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: white;
+    }
+    
+    .resume-container {
+        box-shadow: none;
+        max-width: none;
+        width: 100%;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .left-column, .right-column {
+        width: 100%;
+    }
+    
+    .experience-item {
+        flex-direction: column;
+    }
+    
+    .date-range {
+        width: auto;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    
+    .certifications-container {
+        flex-direction: column;
+    }
+} 
