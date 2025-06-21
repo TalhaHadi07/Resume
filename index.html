@@ -6,42 +6,132 @@
     <title>Talha Hadi - Software Automation Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="resume-container">
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="welcome-overlay">
+        <div class="welcome-container">
+            <div class="welcome-header">
+                <h1 class="welcome-title">
+                    Talha Hadi<br/>
+                    Software Automation Engineer<br/>
+                    Resume
+                </h1>
+                <p class="welcome-subtitle">Select Your Preferred Interface based on your device</p>
+            </div>
+            
+            <div class="device-selection">
+                <div class="device-option" data-layout="mobile">
+                    <div class="device-icon">📱</div>
+                    <h3 class="device-title">Phone Layout</h3>
+
+
+                    <button class="select-btn" data-layout="mobile">
+                        <i class="fas fa-mobile-alt"></i> Choose Mobile View
+                    </button>
+                </div>
+                
+                <div class="device-option" data-layout="desktop">
+                    <div class="device-icon">💻</div>
+                    <h3 class="device-title">Laptop Layout</h3>
+
+
+                    <button class="select-btn" data-layout="desktop">
+                        <i class="fas fa-laptop"></i> Choose Desktop View
+                    </button>
+                </div>
+            </div>
+            
+            <div class="welcome-footer">
+                <label class="remember-choice">
+                    <input type="checkbox" id="remember-preference">
+                    <span class="checkmark"></span>
+                    Remember my preference
+                </label>
+                <p class="welcome-note">You can always switch layouts later using the toggle button</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Layout Toggle Button -->
+    <div class="layout-toggle" id="layout-toggle">
+        <button class="toggle-btn" id="toggle-layout-btn">
+            <i class="fas fa-exchange-alt"></i>
+            <span id="toggle-text">Switch to Mobile</span>
+        </button>
+        <button class="toggle-btn home-btn" id="home-btn">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </button>
+    </div>
+    
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="theme-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+    
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contacts">
+        <a href="https://talhahadi07.github.io/Resume/" class="floating-btn" title="Website" target="_blank">
+            <i class="fas fa-globe"></i>
+        </a>
+        <a href="tel:+923152669308" class="floating-btn" title="Call">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:talhahadi1999@gmail.com" class="floating-btn" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/talha-hadi-7519051a6" class="floating-btn" title="LinkedIn" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+    
+    <div class="resume-container" id="resume-container">
         <!-- Left Column -->
-        <div class="left-column">
+        <div class="left-column fade-in-left">
             <!-- Contact Section -->
-            <div class="section">
-                <div class="section-header">Contact</div>
+            <div class="section" id="contact">
+                <div class="section-header animated-border">Contact</div>
                 <div class="section-content">
                     <div class="contact-item">
-                        <span class="label">Phone</span>
+                        <span class="label"><i class="fas fa-globe"></i> Website</span>
+                        <span class="value underline"><a href="https://talhahadi07.github.io/Resume/" target="_blank">www.talhahadi.com</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="label"><i class="fas fa-phone"></i> Phone</span>
                         <span class="value">+92 3152669308</span>
                     </div>
                     <div class="contact-item">
-                        <span class="label">Email</span>
+                        <span class="label"><i class="fas fa-envelope"></i> Email</span>
                         <span class="value">talhahadi1999@gmail.com</span>
                     </div>
                     <div class="contact-item">
-                        <span class="label">Location</span>
+                        <span class="label"><i class="fas fa-map-marker-alt"></i> Location</span>
                         <span class="value">Karachi, Pakistan</span>
                     </div>
                     <div class="contact-item">
-                        <span class="label">LinkedIn</span>
-                        <span class="value underline">https://www.linkedin.com/in/talha-hadi- 7519051a6</span>
+                        <span class="label"><i class="fab fa-linkedin"></i> LinkedIn</span>
+                        <span class="value underline"><a href="https://www.linkedin.com/in/talha-hadi-7519051a6" target="_blank">Talha Hadi Linkedin Profile</a></span>
                     </div>
                 </div>
             </div>
 
             <!-- Education Section -->
-            <div class="section">
-                <div class="section-header">Education</div>
+            <div class="section" id="education">
+                <div class="section-header animated-border">Education</div>
                 <div class="section-content">
                     <div class="education-item">
                         <div class="institution">NED University of Engineering and Technology</div>
                         <div class="degree">B.E. in Computer and Information Systems Engineering</div>
-                        <div class="year">2016 - 2020</div>
+                        <div class="year">2017 - 2021</div>
                     </div>
                     <div class="education-item">
                         <div class="institution">Adamjee Government Science College</div>
@@ -57,8 +147,8 @@
             </div>
 
             <!-- Skills Section -->
-            <div class="section">
-                <div class="section-header">Skills</div>
+            <div class="section" id="skills">
+                <div class="section-header animated-border">Skills</div>
                 <div class="section-content">
                     <div class="skill-category">
                         <div class="skill-title">Automation Tools/Frameworks:</div>
@@ -100,8 +190,8 @@
             </div>
 
             <!-- Language Section -->
-            <div class="section">
-                <div class="section-header">Language</div>
+            <div class="section" id="languages">
+                <div class="section-header animated-border">Language</div>
                 <div class="section-content">
                     <ul class="language-list">
                         <li>English (Fluent)</li>
@@ -113,74 +203,95 @@
         </div>
 
         <!-- Right Column -->
-        <div class="right-column">
+        <div class="right-column fade-in-right">
             <!-- Header -->
-            <div class="header">
+            <div class="header" id="header">
                 <h1 class="name">TALHA HADI</h1>
                 <h2 class="title">Software Automation Engineer</h2>
             </div>
 
             <!-- Professional Experience -->
-            <div class="section">
-                <div class="section-header-right">Professional Experience</div>
-                <div class="experience-item">
-                    <div class="date-range">
-                        <span class="start-date">Dec 2022</span>
-                        <span class="dash">-</span>
-                        <span class="end-date">Present</span>
+            <div class="section" id="experience">
+                <div class="section-header-right animated-border">Professional Experience</div>
+                <div class="timeline">
+                    <div class="experience-item">
+                        <div class="timeline-dot"></div>
+                        <div class="date-range">
+                            <span class="start-date">Dec 2022</span>
+                            <span class="dash">-</span>
+                            <span class="end-date">Present</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="job-title">Senior Software Automation Engineer</div>
+                            <div class="company">Securiti.Ai , United States</div>
+                            <ul class="responsibilities">
+                                <li>Performing UI automation for web-based applications using both Mabl and Playwright (TypeScript) to build and maintain scalable test suites.</li>
+                                <li>Managing bug reporting and tracking through Jira, and collaborating with developers using Bitbucket for version control.</li>
+                                <li>Monitoring test execution and application health by analyzing logs with Kibana to quickly identify and resolve issues.</li>
+                                <li>Supporting Agile processes by participating in sprint planning and contributing to continuous integration and delivery pipelines.</li>
+                                <li>Detected and tracked bugs using Jira and monitored logs through Kibana.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="job-info">
-                        <div class="job-title">Senior Software Automation Engineer</div>
-                        <div class="company">Securiti.Ai , United States</div>
-                        <ul class="responsibilities">
-                            <li>Performing UI automation for web-based applications using both Mabl and Playwright (TypeScript) to build and maintain scalable test suites.</li>
-                            <li>Managing bug reporting and tracking through Jira, and collaborating with developers using Bitbucket for version control.</li>
-                            <li>Monitoring test execution and application health by analyzing logs with Kibana to quickly identify and resolve issues.</li>
-                            <li>Supporting Agile processes by participating in sprint planning and contributing to continuous integration and delivery pipelines.</li>
-                            <li>Detected and tracked bugs using Jira and monitored logs through Kibana.</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="date-range">
-                        <span class="start-date">Nov 2021</span>
-                        <span class="dash">-</span>
-                        <span class="end-date">Dec 2022</span>
+                    <div class="experience-item">
+                        <div class="timeline-dot"></div>
+                        <div class="date-range">
+                            <span class="start-date">Nov 2021</span>
+                            <span class="dash">-</span>
+                            <span class="end-date">Dec 2022</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="job-title">Software Automation Engineer</div>
+                            <div class="company">TPS Worldwide, Pakistan</div>
+                            <ul class="responsibilities">
+                                <li>Automated regression test suites using Selenium, SpecFlow, and C#.</li>
+                                <li>Designed and executed functional and API test cases using Postman and RestSharp.</li>
+                                <li>Interfaced with development, project, and QA teams to ensure end-to-end test coverage.</li>
+                                <li>Participated in sprint planning and release readiness assessments.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="job-info">
-                        <div class="job-title">Software Automation Engineer</div>
-                        <div class="company">TPS Worldwide, Pakistan</div>
-                        <ul class="responsibilities">
-                            <li>Automated regression test suites using Selenium, SpecFlow, and C#.</li>
-                            <li>Designed and executed functional and API test cases using Postman and RestSharp.</li>
-                            <li>Interfaced with development, project, and QA teams to ensure end-to-end test coverage.</li>
-                            <li>Participated in sprint planning and release readiness assessments.</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="date-range">
-                        <span class="start-date">Nov 2020</span>
-                        <span class="dash">-</span>
-                        <span class="end-date">Nov 2021</span>
+                    <div class="experience-item">
+                        <div class="timeline-dot"></div>
+                        <div class="date-range">
+                            <span class="start-date">Nov 2020</span>
+                            <span class="dash">-</span>
+                            <span class="end-date">Nov 2021</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="job-title">Software Automation Engineer</div>
+                            <div class="company">Orion Tech Solutions, United States</div>
+                            <ul class="responsibilities">
+                                <li>Built and executed test cases for data integrity and dashboard validation.</li>
+                                <li>Performed data validation and backend testing using SQL queries.</li>
+                                <li>Logged defects in Jira and followed up on resolution with developers.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="job-info">
-                        <div class="job-title">Software Automation Engineer</div>
-                        <div class="company">Orion Tech Solutions, United States</div>
-                        <ul class="responsibilities">
-                            <li>Built and executed test cases for data integrity and dashboard validation.</li>
-                            <li>Performed data validation and backend testing using SQL queries.</li>
-                            <li>Logged defects in Jira and followed up on resolution with developers.</li>
-                        </ul>
+
+                    <div class="experience-item">
+                        <div class="timeline-dot"></div>
+                        <div class="date-range">
+                            <span class="start-date">Jun 2020</span>
+                            <span class="dash">-</span>
+                            <span class="end-date">Sep 2020</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="job-title">SQA Engineer</div>
+                            <div class="company">Afiniti</div>
+                            <ul class="responsibilities">
+                                <li>Assisted with manual and automated testing tasks as part of the quality assurance team.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Certifications & Courses -->
-            <div class="section">
-                <div class="section-header-right">Certifications & Courses</div>
+            <div class="section" id="certifications">
+                <div class="section-header-right animated-border">Certifications & Courses</div>
                 <div class="certifications-container">
                     <div class="cert-column">
                         <ul class="cert-list">
@@ -203,5 +314,7 @@
             </div>
         </div>
     </div>
+    
+    <script src="script.js"></script>
 </body>
 </html> 
